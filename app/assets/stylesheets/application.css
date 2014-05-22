@@ -331,7 +331,7 @@ Styling fro the admin area
 }
 
 .admin-content .text {
-  margin-left: 25px;
+  padding: 18px;
   margin-top: 50px;
 }
 
@@ -351,3 +351,31 @@ Styling fro the admin area
 
 .td-width-30px{width: 30px;}
 .td-width-80px{width: 150px; text-align: center}
+
+.dashboard-panel-box {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(3, 0, 0, 0);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  margin-top: 30px;
+  width:22%;
+  margin-left: 29px;
+  float: left;
+  display: inline-block;
+  text-align: center;
+  height:auto;
+}
+
+.dashboard-panel-box h2 {
+  font-size: 50px;
+}
+
+.stat-blue{color: #31708F;}
+.stat-yellow{color: #8A6D3B;}
+.stat-red{color: #A94442;}
+.stat-green{color: #3C763D;}
+
+.blue{background-color: #D9EDF7;}
+.yellow{background-color: #FCF8E3;}
+.red{background-color: #F2DEDE}
+.green{background-color: #DFF0D8;}

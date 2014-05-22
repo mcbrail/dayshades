@@ -6,12 +6,7 @@
 	        <div class="top-panel-links">
 	        	<ul>
 	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
-	                <li><a href="customers.html">Customers</a></li>
-	                <li><%= link_to 'PRODUCTS'%></li>
-	                <li><a href="orders.html">OrderS</a></li>
-	                <li><a href="user.html">User</a></li>
-	                <li><%= link_to 'FRONTEND', public_home_path%></li>
-	                <li><a href="#">Sign Out</a></li>
+	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
 	            </ul>
 	        
 	        </div>
@@ -53,18 +48,32 @@
 								</tr>
 								<% @categories.each do |category| %>
 									<tr>
-										
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
 										<td><%= image_tag(category.image, :size => "85x100") %></td>
 										<td class="td-width-80px"><%= category.name %></td>
-										<td><%= category.description %></td>
+										<td><%= category.description %> <br/></td>
 										<td></td>
 									</tr>
 								<% end %>
 						</table>
+						<br><br><br>
 			</div>
 		</div>
 	</div>
 </div>
 
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
 
+<div class="bottom-wrapper">
+	<div class="bottom">
+		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
 
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+	</div>
+</div>
