@@ -1,5 +1,31 @@
 Dayshades::Application.routes.draw do
 
+  get "customers/index"
+
+  get "customers/new"
+
+  get "customers/edit"
+
+  get "customers/show"
+
+  get "products/index"
+
+  get "products/new"
+
+  get "products/edit"
+
+  get "products/show"
+
+  get "categories/edit"
+
+  get "categories/new"
+
+  get "categories/show"
+
+  get "categories/index"
+
+  get "dashboard/index"
+
   #resources :public
 
  # match 'index' => 'public#home'
