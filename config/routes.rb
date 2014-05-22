@@ -1,5 +1,7 @@
 Dayshades::Application.routes.draw do
 
+  resources :categories
+
   get "customers/index"
 
   get "customers/new"

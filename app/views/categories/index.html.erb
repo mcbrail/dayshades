@@ -1,2 +1,70 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<<div class="admin-top">	
+	<div class="wraptop">
+	  <div class="top">
+	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
+	        
+	        <div class="top-panel-links">
+	        	<ul>
+	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
+	                <li><a href="customers.html">Customers</a></li>
+	                <li><%= link_to 'PRODUCTS'%></li>
+	                <li><a href="orders.html">OrderS</a></li>
+	                <li><a href="user.html">User</a></li>
+	                <li><%= link_to 'FRONTEND', public_home_path%></li>
+	                <li><a href="#">Sign Out</a></li>
+	            </ul>
+	        
+	        </div>
+		</div>
+	</div>
+</div>
+
+<div class="admin-wrap">
+	<div class="admin-content">
+		<div class ="text">
+			<h1>Categories</h1>
+
+			<div class="left">
+				<br>
+				<%= flash[:notice] %>
+				<br>
+				<%= form_for :category do |c| %>
+						
+					Category Name <br>
+					<%= c.text_field :name, {class:"textfield"} %><br><br>
+
+					Product Image (thumbnals url Product name/thumbnail) <br>
+					<%= c.text_field :image,{class:"textfield"} %><br><br>
+
+					Category Description <br>
+					<%= c.text_field :description,{class:"textfield textarea-height"} %><br><br>
+
+					<%= submit_tag "Save Category", {class:"button-class"} %><br>
+				<% end %>
+			</div> 
+			<div class="right">	
+			<br><br>	
+						<table >
+								<tr>
+									<td class="table-header-style td-width-30px"><b>IMAGE</b></td>
+									<td class="table-header-style td-width-80px"><b>NAME</b></td>
+									<td class="table-header-style"><b>DESCRIPTION</td>
+									<td class="table-header-style"><b>ACTIONS</td>
+								</tr>
+								<% @categories.each do |category| %>
+									<tr>
+										
+										<td><%= image_tag(category.image, :size => "85x100") %></td>
+										<td class="td-width-80px"><%= category.name %></td>
+										<td><%= category.description %></td>
+										<td></td>
+									</tr>
+								<% end %>
+						</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
