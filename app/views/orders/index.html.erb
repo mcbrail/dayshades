@@ -21,48 +21,13 @@
 <div class="admin-wrap">
 	<div class="admin-content">
 		<div class ="text">
-			<h1>Categories</h1>
+			<h1>Orders</h1>
 
 			<div class="left">
-				<br>
-				<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
-	           <br><br>
-				<%= form_for :category do |c| %>
-						
-					Category Name <br>
-					<%= c.text_field :name, {class:"textfield"} %><br><br>
-
-					Product Image (thumbnals url Product name/thumbnail) <br>
-					<%= c.text_field :image,{class:"textfield"} %><br><br>
-
-					Category Description <br>
-					<%= c.text_field :description,{class:"textfield textarea-height"} %><br><br>
-
-					<%= submit_tag "Save Category", {class:"button-class"} %><br>
-				<% end %>
+				
 			</div> 
 			<div class="right">	
-			<br><br>	
-						<table >
-								<tr>
-									<td class="table-header-style td-width-30px"><b>IMAGE</b></td>
-									<td class="table-header-style td-width-80px"><b>NAME</b></td>
-									<td class="table-header-style"><b>DESCRIPTION</td>
-									<td class="table-header-style"><b>ACTIONS</td>
-								</tr>
-								<% @categories.each do |category| %>
-									<tr>
-										<td>&nbsp;</td>
-									</tr>
-									<tr>
-										<td><%= image_tag(category.image, :size => "85x100") %></td>
-										<td class="td-width-80px"><%= category.name %></td>
-										<td><%= category.description %> <br/></td>
-										<td></td>
-									</tr>
-								<% end %>
-						</table>
-						<br><br><br>
+			
 			</div>
 		</div>
 	</div>

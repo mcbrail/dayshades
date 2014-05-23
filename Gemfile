@@ -7,6 +7,8 @@ gem 'rails', '3.2.16'
 
 gem 'rails_12factor'
 
+gem 'simple_form'
+
 group :development do
 	gem 'sqlite3'
 end

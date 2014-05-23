@@ -20,13 +20,13 @@ class CategoriesController < ApplicationController
   				redirect_to action: "index"
   			else
   				
-        		flash[:notice]='Could not save category on the database'
+        		flash[:notice]='Error :Could not save category on the database, Fill in all Fields'
         		redirect_to action: "index"
   		end
   end
 
   def index
   	@category = Category.new
-  	@categories = Category.find(:all)
+  	@categories = Category.all
   end
 end

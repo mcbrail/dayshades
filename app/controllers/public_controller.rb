@@ -3,8 +3,7 @@ class PublicController < ApplicationController
 
 
   def home
-    @home_title
-    
+    @categories = Category.all
   end
 
   def contact
@@ -17,6 +16,7 @@ class PublicController < ApplicationController
   end
 
   def products
+    @all_products = Product.all
   end
 
   def show

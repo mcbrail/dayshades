@@ -1,6 +1,13 @@
 Dayshades::Application.routes.draw do
 
+  get "orders/index"
+
+  get "orders/show"
+
   resources :categories
+  resources :products
+  resources :orders
+  resources :customers
 
   get "customers/index"
 

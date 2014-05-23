@@ -190,6 +190,15 @@ h1{font-family:"Century Gothic"; font-size:30px; color:#FF3366; text-align:left;
   width: 262px;
 }
 
+.dropdown {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #333333;
+  color: #FF3366;
+  height: 60px;
+  padding: 5px;
+  width: 340px;
+}
+
 .button-class {
   background: none repeat scroll 0 0 #FF3399;
   border: 1px solid #FF3399;
@@ -291,10 +300,10 @@ display: inline-block;
   border-radius: 15px 15px 0 0;
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
   display: inline-block;
-  margin-left: 22px;
+  margin-left: 19px;
   margin-top: 10px;
   padding: 5px;
-  width: 260px;
+  width: auto;
 }
 
 .extra_info {
@@ -306,6 +315,20 @@ display: inline-block;
 .details {
   font-size:16px;
 }
+
+.featured-categories .info-box {
+  display: inline-block;
+  float: left;
+  padding: 20px;
+  width: 200px;
+}
+
+#errorExplanation{width:300px; border: 1px solid #333; background:#F2DEDE }
+
+#errorExplanation h2{color: #fff }
+
+.featured-categories{margin-top: 10px; margin-bottom: 30px}
+.featured-categories h1{background: #FF3366; color: #fff}
 
 .text-red{color:#FF3355;}
 
@@ -347,9 +370,20 @@ Styling fro the admin area
   width:65%;
 }
 
-.table-header-style{background: #428BCA; color:#FFF;padding:5px;}
+.admin-content .text .right table td {
+  font-size: 12px
+}
 
-.td-width-30px{width: 30px;}
+.admin-content .text .right a {
+  font-size: 12px
+}
+
+.table-header-style{background: #428BCA; color:#FFF;padding:5px;}
+.align-center{text-align: center}
+
+.td-width-30px{width: 30px;text-align: center}
+.td-width-40px{width: 40px;text-align: center}
+.td-width-100px{width: 100px; text-align: center}
 .td-width-80px{width: 150px; text-align: center}
 
 .dashboard-panel-box {

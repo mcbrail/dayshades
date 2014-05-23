@@ -38,7 +38,19 @@
             
             <div class="row">
 	            <div class="content-col">
-	            	<%= image_tag ("slider.jpg") %>
+	            	<% @all_products.each do |product| %>
+                                    <div class="picture_box">
+                                          <%= image_tag(product.image_thumb, :size => "160x200") %><br/>
+                                            <div class="table-header-style">
+                                            <p >Dress Code : <%= product.code %><p>
+                                            <p>Dress Colour : <br><%= product.color %><p>
+                                            <p><b>Price : R<%= product.price %></b><p>
+                                            </div>
+                                            <div class="clear"><br></div>
+                                            <%= link_to 'ADD TO CART','#', {class:"button-class"} %>
+                                            <br><br>
+                                    </div>
+                                <% end %>
 	            </div>
         	</div>
         </div>
