@@ -8,6 +8,7 @@ Dayshades::Application.routes.draw do
   resources :products
   resources :orders
   resources :customers
+  resources :dashboard
 
   get "customers/index"
 
