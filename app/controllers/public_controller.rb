@@ -23,13 +23,20 @@ class PublicController < ApplicationController
   def products
     @products = Product.all
 
+
+  end
+
+  def list
+    @products = Product.all
+    @categories = Category.all
   end
 
   def index
-    @product = Product.find(params[:id])
+    @categories = Category.all
   end
 
   def show
     @product = Product.find(params[:id])
+    @categories = Category.all
   end
 end

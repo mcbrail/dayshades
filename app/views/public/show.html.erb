@@ -4,7 +4,7 @@
             <ul class="list-align-right">
                 <li><%= link_to 'REGISTER', customers_new_path %></li>
                 <li><%= link_to 'SIGN IN', "#" %></li>
-                <li><%= link_to 'ADMIN', "#" %></li>
+                 <li><%= link_to 'ADMIN', administrators_path %></li> 
                 <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
             </ul>
@@ -25,7 +25,7 @@
         		<ul>
         			<li><%= link_to 'HOME', public_home_path%></li>
         			<li><%= link_to 'ABOUT US', public_about_path %></li>
-        			<li><%= link_to 'PRODUCTS', public_products_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_list_path %></li>
         			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
         			<li><%= link_to 'CONTACT US', public_contact_path %></li>
         		</ul>
@@ -34,15 +34,13 @@
             
             <div class="row">
 	            <div class="content-col">
-                    <h1>Details</h1>
-	            	br>
-                    <div class = "column-left">
-                        
-                          <%= image_tag(@product.image_big) %>
-                                
+                    <div class ="left_side">
+                            <br>
+                          <%= image_tag(@product.image_big) %>           
                     </div>
 
-                    <div class="column-right">
+                    <div class="right_side">
+                        <br>
                         <h2>Details</h2>
 
                         <table width="450">
@@ -83,16 +81,16 @@
                                 <td><b>PRICE</b></td>
                                 <td>R <%= @product.price %></td>
                             </tr>
-
-
                         </table>
+                        <br>
+                        <%= link_to 'ADD TO CART', "#", {class:"button-class"} %>
                         
                     </div>
 	            </div>
         	</div>
         </div>
     </div>
-    <div class="clear"></div>
+    <div class="clear"><br></div>
 </div>
 
 <div class="wrap-footer">

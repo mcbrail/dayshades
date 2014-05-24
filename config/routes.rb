@@ -70,6 +70,8 @@ Dayshades::Application.routes.draw do
 
   get "public/products"
 
+  get "public/list"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -119,7 +121,7 @@ Dayshades::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'public#home'
+  root :to => 'public#index'
 
   # See how all your routes lay out with "rake routes"
 

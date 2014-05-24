@@ -147,6 +147,27 @@ h1{font-family:"Century Gothic"; font-size:30px; color:#FF3366; text-align:left;
   border-spacing: 0;
 }
 
+.row .content-col .left_side {
+  width: 700px; 
+  display: inline-block;
+  float: left;
+}
+
+.row .content-col .right_side {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  margin-left: 120px;
+}
+
+.content-col .right_side h2 {
+  background: none repeat scroll 0 0 #0EBFE9;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
 .content-col .text-left table td {
   border-top: 1px solid #DDDDDD;
     line-height: 1.42857;

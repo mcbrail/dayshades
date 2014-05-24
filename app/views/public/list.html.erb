@@ -4,7 +4,7 @@
             <ul class="list-align-right">
                 <li><%= link_to 'REGISTER', customers_new_path %></li>
                 <li><%= link_to 'SIGN IN', "#" %></li>
-                <li><%= link_to 'ADMIN', administrators_path %></li>
+                <li><%= link_to 'ADMIN', administrators_path %></li> 
                 <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
             </ul>
@@ -16,16 +16,16 @@
     <div class="content">
         <div class="header-row">
             <div class="logo">
-                    <%= link_to (image_tag ("logo.png")), public_home_path %>
+                    <%= link_to (image_tag ("logo.png")), public_index_path %>
             </div>
         </div>
 
         <div class="row">
         	<div class="nav">
         		<ul>
-        			<li><%= link_to 'HOME', public_path%></li>
+        			<li><%= link_to 'HOME', public_index_path%></li>
         			<li><%= link_to 'ABOUT US', public_about_path %></li>
-        			<li><%= link_to 'PRODUCTS', public_products_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_list_path %></li>
         			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
         			<li><%= link_to 'CONTACT US', public_contact_path %></li>
         		</ul>
@@ -34,33 +34,23 @@
             
             <div class="row">
 	            <div class="content-col">
-	            	<%= image_tag ("slider.jpg") %>
-	            </div>
-        	</div>
-
-            <div class="row">
-                <div class="featured-categories">
-                    <h1>FEATURED CATEGORIES</h1>
-
-                    <div class="row">
-                        <div class="content-col">
-                                <% @categories.each do |category| %>
+                    <h1>Products</h1>
+	            	<% @products.each do |product| %>
                                     <div class="picture_box">
-                                          <%= image_tag(category.image, :size => "260x300") %><br/>
-                                            <h3><%= category.name %><h3>
+                                          <%= image_tag(h(product.image_thumb), :size => "160x200") %><br/>
+                                            <div class="table-header-style">
+                                            <p>Dress Code : <%= h(product.code) %><p>
+                                            <p>Dress Colour : <br><%= h(product.color) %><p>
+                                            <p><b>Price : R<%= h(product.price) %></b><p>
+                                            </div>
                                             <div class="clear"><br></div>
-                                            <%= link_to 'VIEW CATEGORY','#', {class:"button-class"} %>
+                                            
+                                            <%= link_to 'ADD TO CART', {:action => 'show', :id => product.id}, {class:"button-class"} %>
                                             <br><br>
                                     </div>
                                 <% end %>
-                        
-                        </div>
-                            <div class="clear"><br><br></div>
-                     </div>
-                    </div>
-                </div>
-            </div>
-
+	            </div>
+        	</div>
         </div>
     </div>
     <div class="clear"></div>
@@ -76,6 +66,6 @@
 	<div class="bottom">
 		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
 
-        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@lebom" %> </p>
 	</div>
 </div>

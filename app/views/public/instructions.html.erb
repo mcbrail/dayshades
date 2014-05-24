@@ -4,7 +4,7 @@
         	<ul class="list-align-right">
                 <li><%= link_to 'REGISTER', customers_new_path %></li>
                 <li><%= link_to 'SIGN IN', "#" %></li>
-	            <li><%= link_to 'ADMIN', "#" %></li>
+	            <li><%= link_to 'ADMIN', administrators_path %></li>
 	            <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
             </ul>
@@ -16,16 +16,16 @@
 	<div class="content">
     	<div class="header-row">
     		<div class="logo">
-    				<%= link_to (image_tag ("logo.png")), public_home_path %>
+    				<%= link_to (image_tag ("logo.png")), public_index_path %>
     		</div>
         </div>
 
         <div class="row">
         	<div class="nav">
         		<ul>
-        			<li><%= link_to 'HOME', public_home_path%></li>
+        			<li><%= link_to 'HOME', public_index_path%></li>
         			<li><%= link_to 'ABOUT US', public_about_path %></li>
-        			<li><%= link_to 'PRODUCTS', public_products_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_list_path %></li>
         			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
         			<li><%= link_to 'CONTACT US', public_contact_path %></li>
         		</ul>
