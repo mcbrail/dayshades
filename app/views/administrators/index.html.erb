@@ -1,0 +1,68 @@
+<div class="admin-top">	
+	<div class="wraptop">
+	  <div class="top">
+	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
+	        
+	        <div class="top-panel-links">
+	        	<ul>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+
+	            </ul>
+	        
+	        </div>
+		</div>
+	</div>
+</div>
+
+<div class="admin-wrap">
+	<div class="admin-content">
+		<div class ="text">
+			
+			<div class="login">
+					<h1>ADMINISTRATORS LOGIN:<span> Try, YOU WONT WIN</span></h1>
+				<div class = "login-left">
+					<%= form_tag(administrators_path) do %>
+					            <div class="form-group">
+					                <%= label_tag 'emai', 'Email Address' %><br>
+					                <%= text_field_tag 'email', nil, class: 'form-input', placeholder: 'Your Name' %>
+					            </div>
+					           <div class="form-group">
+					               <%= label_tag 'password', 'Password' %><br>
+					               <%= password_field_tag 'password', nil, class: 'form-input', placeholder: 'Your Email Address' %>
+					           </div>
+					           
+					           <%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
+      				 <% end %>
+
+				</div>
+				<div class = "login-right">
+					<%= link_to (image_tag ("keyhole.png")), public_home_path %>
+				</div>
+				<div class"clear"></div>
+			</div>	
+
+			
+			
+			<div class="clear"></div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+	</div>
+</div>

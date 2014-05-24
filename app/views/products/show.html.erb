@@ -6,8 +6,12 @@
 	        <div class="top-panel-links">
 	        	<ul>
 	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
+	            	<li><%= link_to 'CUSTOMERS', customers_path %></li>
 	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
 	            	<li><%= link_to 'PRODUCTS', products_path %></li>
+	            	<li><%= link_to 'ORDERS', orders_path %></li>
+	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
+
 	            </ul>
 	        
 	        </div>
@@ -20,22 +24,56 @@
 		<div class ="text">
 			<h1>Product Details</h1>
 				<br>
-	            	<div class = "left">
-	            		<p>
-						  <strong>Name:</strong>
-						  <%= @product.color %>
-						</p>
-
-						<p>
-						  <strong>Email:</strong>
-						  <%= @product.fabric %>
-						</p>
-								
+	            	<div class = "column-left">
+	            		
+						  <%= image_tag(@product.image_big) %>
+						  		
 					</div>
 
-					<div class="right">
+					<div class="column-right">
+						<h2>Details</h2>
 
-						
+						<table width="450">
+							<tr>
+								<td><b>ID</b></td>
+								<td><b>CATEGORY</b></td>
+							</tr>
+							<% @categories.each do |c| %>
+							<tr>
+								<td><%= h(c.id) %></td>
+								<td><%= h(c.name) %></td>
+							</tr>
+							<% end %>
+						<table>
+
+						<br>
+						<table width="450">
+							<tr>
+								<td><b>CATEGORY ID</b></td>
+								<td><%= @product.category_id %></td>
+							</tr>
+							<tr>
+								<td><b>PRODUCT CODE</b></td>
+								<td><%= @product.code.upcase %></td>
+							</tr>
+
+							<tr>
+								<td><b>AVAILABLE COLOURS</b></td>
+								<td><%= @product.color.upcase %></td>
+							</tr>
+
+							<tr>
+								<td><b>PRODUCT FABRIC</b></td>
+								<td><%= @product.fabric.upcase %></td>
+							</tr>
+
+							<tr>
+								<td><b>PRICE</b></td>
+								<td>R <%= @product.price %></td>
+							</tr>
+
+
+						</table>
 	            		
 				    </div>
         	</div>

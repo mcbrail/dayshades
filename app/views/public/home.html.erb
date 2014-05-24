@@ -1,27 +1,23 @@
 <div class="wraptop">
   <div class="top">
         <div class="top-panel-links">
-        	<ul class="list-align-right">
-            	<li><%= image_tag ("facebook.png") %> </li>
+            <ul class="list-align-right">
+                <li><%= link_to 'REGISTER', customers_new_path %></li>
+                <li><%= link_to 'SIGN IN', "#" %></li>
+                <li><%= link_to 'ADMIN', administrators_path %></li>
+                <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
-                <li><a href="#">Sign In</a></li>
             </ul>
         </div>
-	</div>
+    </div>
 </div>
 
 <div class="wrapper">
-	<div class="content">
-    	<div class="header-row">
-        	<div class="header-cols-2">
-    			<div class="logo">
-    				<%= link_to (image_tag ("logo.png")), public_home_path %>
-    			</div>
-             </div>
-             
-             <div class="header-cols-2">
-    			
-             </div>
+    <div class="content">
+        <div class="header-row">
+            <div class="logo">
+                    <%= link_to (image_tag ("logo.png")), public_home_path %>
+            </div>
         </div>
 
         <div class="row">

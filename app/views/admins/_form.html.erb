@@ -1,0 +1,17 @@
+<%= simple_form_for(@admin) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, {class:"textfield"} %>  
+    <br>
+    <%= f.input :phone, {class:"textfield"} %>
+    <br>
+    <%= f.input :email, {class:"textfield"} %>
+    <br>
+    <%= f.input :password,{class:"textfield"} %>
+  </div>
+<div class="clear"></div>
+  <div class="form-actions">
+    <%= f.button :submit, {class:"button-class"} %>
+  </div>
+<% end %>

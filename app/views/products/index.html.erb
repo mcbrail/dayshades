@@ -10,6 +10,7 @@
 	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
 	            	<li><%= link_to 'PRODUCTS', products_path %></li>
 	            	<li><%= link_to 'ORDERS', orders_path %></li>
+	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
 
 	            </ul>
 	        
@@ -26,33 +27,7 @@
 	            	<div class = "left">
 	            		<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
 	            		<br><br>
-		            	<%= form_for @product do |p| %>
-
-		            			Select Category <br>
-								<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => true })  %><br><br>
-
-		            			Product Code <br>
-								<%= p.text_field :code, {class:"textfield"} %><br><br>
-
-								Product Colour <br>
-								<%= p.text_field :color, {class:"textfield"} %><br><br>
-
-								Fabric Type <br>
-								<%= p.text_field :fabric, {class:"textfield"} %><br><br>
-
-								Product Thumbnail Image <br>
-								<%= p.text_field :image_thumb, {class:"textfield"} %><br><br>
-
-								Product Big Image  <br>
-								<%= p.text_field :image_big, {class:"textfield"} %><br><br>
-
-								Price <br>
-								<%= p.text_field :price, {class:"textfield"} %><br><br>
-
-
-								<%= submit_tag "Insert Product", {class:"button-class"} %><br>
-
-						<% end %>
+		            	<%= render 'form' %>
 					</div>
 
 					<div class="right">
@@ -89,7 +64,7 @@
 									<td class="align-center"><%= product.code %></td>
 									<td class="align-center"><%= product.category_id %></td>
 									<td class="align-center"><b>R<%= product.price %></b></td>
-									<td class="align-center"><%= link_to 'SHOW', products_show_path(product)%> | <%= link_to 'EDIT', products_path %> | <%= link_to 'DELETE', products_path %></td>
+									<td class="align-center"><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_products_path(product) %>  | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 								</tr>
 							<% end %>
 						</table>

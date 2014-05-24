@@ -1,5 +1,16 @@
 Dayshades::Application.routes.draw do
 
+  resources :admins
+
+
+  get "administrators/index"
+
+  get "administrators/new"
+
+  get "administrators/show"
+
+  get "administrators/edit"
+
   get "orders/index"
 
   get "orders/show"
@@ -9,6 +20,7 @@ Dayshades::Application.routes.draw do
   resources :orders
   resources :customers
   resources :dashboard
+  resources :administrators
 
   get "customers/index"
 

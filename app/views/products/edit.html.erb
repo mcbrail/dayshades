@@ -1,2 +1,79 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<div class="admin-top">	
+	<div class="wraptop">
+	  <div class="top">
+	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
+	        
+	        <div class="top-panel-links">
+	        	<ul>
+	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
+	            	<li><%= link_to 'CUSTOMERS', customers_path %></li>
+	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
+	            	<li><%= link_to 'PRODUCTS', products_path %></li>
+	            	<li><%= link_to 'ORDERS', orders_path %></li>
+	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
+
+	            </ul>
+	        
+	        </div>
+		</div>
+	</div>
+</div>
+
+<div class="admin-wrap">
+	<div class="admin-content">
+		<div class ="text">
+			<h1>Edit Products</h1>
+				<br>
+	            	<div class = "left">
+	            		<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
+	            		<br><br>
+		            	<%= render 'form2' %>
+					</div>
+
+					<div class="right">
+
+						<BR><BR>
+	            		<table width="850" border="0">
+							<tr>
+								<td class="table-header-style td-width-30px"><b> IMAGE</b></td>
+								<td class="table-header-style td-width-100px"><b> COLOUR</b></td>
+								<td class="table-header-style td-width-100px"><b> FABRIC</b></td>
+								<td class="table-header-style td-width-100px"><b> CODE</b></td>
+								<td class="table-header-style td-width-40px"><b> CATEGORY</b></td>
+								<td class="table-header-style td-width-40px"><b> PRICE</b></td>
+								<td class="table-header-style td-width-100px"><b> &nbsp;</b></td>
+								
+							</tr>
+							<% @products.each do |product| %>
+								<tr>
+									<td class="align-center"><%= image_tag(product.image_thumb, :size => "85x100") %></td>
+									<td class="align-center"><%= product.color %></td>
+									<td class="align-center"><%= product.fabric %></td>
+									<td class="align-center"><%= product.code %></td>
+									<td class="align-center"><%= product.category_id %></td>
+									<td class="align-center"><b>R<%= product.price %></b></td>
+									<td class="align-center"><%= link_to 'Edit', edit_admin_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+								</tr>
+							<% end %>
+						</table>
+				    </div>
+				    
+        	</div>
+        </div>
+    </div>
+							
+</div>
+<div class="clear"><br><br></div>
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+	</div>
+</div>
