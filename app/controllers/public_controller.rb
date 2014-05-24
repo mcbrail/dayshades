@@ -7,11 +7,6 @@ class PublicController < ApplicationController
     redirect_to(:action => 'show_cart')
   end
 
-  def show_cart
-    
-  end
-
-
   def home
     @categories = Category.all
   end
@@ -26,9 +21,15 @@ class PublicController < ApplicationController
   end
 
   def products
-    @all_products = Product.all
+    @products = Product.all
+
+  end
+
+  def index
+    @product = Product.find(params[:id])
   end
 
   def show
+    @product = Product.find(params[:id])
   end
 end

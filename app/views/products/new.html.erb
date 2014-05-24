@@ -8,7 +8,7 @@
 	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
 	            	<li><%= link_to 'CUSTOMERS', customers_path %></li>
 	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
-	            	<li><%= link_to 'PRODUCTS', products_path %></li>
+	            	<li><%= link_to 'PRODUCTS', products_new_path %></li>
 	            	<li><%= link_to 'ORDERS', orders_path %></li>
 	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
 
@@ -27,7 +27,7 @@
 	            	<div class = "left">
 	            		<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
 	            		<br><br>
-		            	<%= render 'form2' %>
+		            	<%= render 'form' %>
 					</div>
 
 					<div class="right">

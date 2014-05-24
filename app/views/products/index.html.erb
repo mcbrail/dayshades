@@ -22,30 +22,31 @@
 <div class="admin-wrap">
 	<div class="admin-content">
 		<div class ="text">
-			<h1>Products</h1>
-				<br>
-	            	<div class = "left">
-	            		<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
-	            		<br><br>
-		            	<%= render 'form' %>
-					</div>
-
-					<div class="right">
-
-						<table width="850" border="0">
+			<h1>Product List</h1>
+			<br/>
+			<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
+				<div class = "column-right">
+				<br><br>
+					<table width="350" border="0">
 							<tr>
 								<td class="table-header-style td-width-30px"><b> ID</b></td>
+								<td class="table-header-style td-width-30px"><b> IMAGE</b></td>
 								<td class="table-header-style td-width-30px"><b> CATEGORY</b></td>
 							</tr>
 							<% @categories.each do |c| %>
 							<tr>
 								<td><%= c.id %></td>
+								<td><%= image_tag(c.image, :size => "85x100") %></td>
 								<td><%= c.name%></td>
 							</tr>
 							<% end %>
-						</table>
-						<BR><BR>
-	            		<table width="850" border="0">
+					</table>
+				</div>
+
+					<div class = "column-left">
+					<%= link_to 'ADD NEW PRODUCT', products_new_path, {class:"button-class"} %>
+					<br><br>
+					<table width="800" border="0">
 							<tr>
 								<td class="table-header-style td-width-30px"><b> IMAGE</b></td>
 								<td class="table-header-style td-width-100px"><b> COLOUR</b></td>
@@ -53,21 +54,22 @@
 								<td class="table-header-style td-width-100px"><b> CODE</b></td>
 								<td class="table-header-style td-width-40px"><b> CATEGORY</b></td>
 								<td class="table-header-style td-width-40px"><b> PRICE</b></td>
-								<td class="table-header-style td-width-100px"><b> &nbsp;</b></td>
+								<td width="100" class="table-header-style "><b> &nbsp;</b></td>
 								
 							</tr>
 							<% @products.each do |product| %>
 								<tr>
-									<td class="align-center"><%= image_tag(product.image_thumb, :size => "85x100") %></td>
+									<td class="align-center"><%= link_to image_tag(product.image_thumb, :size => "85x100"), product %></td>
 									<td class="align-center"><%= product.color %></td>
 									<td class="align-center"><%= product.fabric %></td>
 									<td class="align-center"><%= product.code %></td>
 									<td class="align-center"><%= product.category_id %></td>
 									<td class="align-center"><b>R<%= product.price %></b></td>
-									<td class="align-center"><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_products_path(product) %>  | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+									<td width="100" class="align-center"><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
 								</tr>
 							<% end %>
 						</table>
+	            		
 				    </div>
 				    
         	</div>

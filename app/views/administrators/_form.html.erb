@@ -1,18 +1,17 @@
 <%= simple_form_for @admin do |a| %>
 
-		Name and Surname <br>
-		<%= a.text_field :name, {class:"textfield"} %><br><br>
+Name and Surname <br>
+<%= a.text_field :name, {class:"textfield"} %><br><br>
 
-		Contact Numbers <br>
-		<%= a.text_field :phone, {class:"textfield"} %><br><br>
+Contact Numbers <br>
+<%= a.text_field :phone, {class:"textfield"} %><br><br>
 
-		Email Address <br>
-		<%= a.text_field :email, {class:"textfield"} %><br><br>
+Email Address <br>
+<%= a.text_field :email, {class:"textfield"} %><br><br>
 
-		Password <br>
-		<%= a.password_field :password, {class:"textfield"} %><br><br>
+Password <br>
+<%= a.password_field :password, {class:"textfield"} %><br><br>
 
-
-		<%= submit_tag "Save", {class:"button-class"} %><br>
+<%= submit_tag "Save", {class:"button-class"} %><br>
 
 <% end %>

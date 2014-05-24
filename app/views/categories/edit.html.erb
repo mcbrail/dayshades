@@ -1,4 +1,4 @@
-<<div class="admin-top">	
+<div class="admin-top">	
 	<div class="wraptop">
 	  <div class="top">
 	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
@@ -6,12 +6,11 @@
 	        <div class="top-panel-links">
 	        	<ul>
 	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
-	                <li><a href="customers.html">Customers</a></li>
-	                <li><%= link_to 'PRODUCTS'%></li>
-	                <li><a href="orders.html">OrderS</a></li>
-	                <li><a href="user.html">User</a></li>
-	                <li><%= link_to 'FRONTEND', public_home_path%></li>
-	                <li><a href="#">Sign Out</a></li>
+	            	<li><%= link_to 'CUSTOMERS', customers_path %></li>
+	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
+	            	<li><%= link_to 'PRODUCTS', products_path %></li>
+	            	<li><%= link_to 'ORDERS', orders_path %></li>
+	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
 	            </ul>
 	        
 	        </div>
@@ -25,41 +24,10 @@
 			<h1>Edit Category</h1>
 
 			<div class="left">
-				<br><br>
-				<%= form_for :category do |c| %>
-						
-					Category Name <br>
-					<%= c.text_field :name, {class:"textfield"} %><br><br>
-
-					Product Image (thumbnals url Product name/thumbnail) <br>
-					<%= c.text_field :image,{class:"textfield"} %><br><br>
-
-					Category Description <br>
-					<%= c.text_field :description,{class:"textfield textarea-height"} %><br><br>
-
-					<%= submit_tag "Save Category", {class:"button-class"} %><br>
-				<% end %>
+				<%= render 'form' %>
 			</div> 
 			<div class="right">	
-			<br><br>	
-						<table width="850" border="0">
-								<tr>
-									<td class="table-header-style"><b>ID</b></td>
-									<td class="table-header-style"><b>IMAGE</b></td>
-									<td class="table-header-style"><b>NAME</b></td>
-									<td class="table-header-style"><b>DESCRIPTION</td>
-									<td class="table-header-style"><b>ACTIONS</td>
-								</tr>
-								<% @categories.each do |category| %>
-									<tr>
-										<td><%= category.category_id %></td>
-										<td><%= image_tag(category.image, :size => "85x100") %></td>
-										<td><%= category.name %></td>
-										<td><%= category.description %></td>
-										<td></td>
-									</tr>
-								<% end %>
-						</table>
+			
 			</div>
 		</div>
 	</div>

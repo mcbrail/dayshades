@@ -1,7 +1,12 @@
 Dayshades::Application.routes.draw do
 
   resources :admins
-
+  resources :categories
+  resources :products
+  resources :orders
+  resources :customers
+  resources :dashboard
+  resources :administrators
 
   get "administrators/index"
 
@@ -15,12 +20,7 @@ Dayshades::Application.routes.draw do
 
   get "orders/show"
 
-  resources :categories
-  resources :products
-  resources :orders
-  resources :customers
-  resources :dashboard
-  resources :administrators
+  
 
   get "customers/index"
 
@@ -57,6 +57,10 @@ Dayshades::Application.routes.draw do
  # match 'products' => 'public#products'
 
   get "public/home"
+
+  get "public/show"
+
+  get "public/index"
 
   get "public/contact"
 
