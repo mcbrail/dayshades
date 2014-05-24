@@ -1,48 +1,30 @@
-<div class="admin-top">	
-	<div class="wraptop">
-	  <div class="top">
-	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
-	        
-	        <div class="top-panel-links">
-	        	<ul>
-	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
-	            	<li><%= link_to 'CUSTOMERS', customers_path %></li>
-	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
-	            	<li><%= link_to 'PRODUCTS', products_path %></li>
-	            	<li><%= link_to 'ORDERS', orders_path %></li>
+<h1>Listing orders</h1>
 
-	            </ul>
-	        
-	        </div>
-		</div>
-	</div>
-</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Pay type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<div class="admin-wrap">
-	<div class="admin-content">
-		<div class ="text">
-			<h1>Orders</h1>
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.name %></td>
+    <td><%= order.address %></td>
+    <td><%= order.email %></td>
+    <td><%= order.pay_type %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 
-			<div class="left">
-				
-			</div> 
-			<div class="right">	
-			
-			</div>
-		</div>
-	</div>
-</div>
+<br />
 
-<div class="wrap-footer">
-	<div class="footer">
-		
-	</div>
-</div>
-
-<div class="bottom-wrapper">
-	<div class="bottom">
-		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
-
-        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
-	</div>
-</div>
+<%= link_to 'New Order', new_order_path %>
+<p><%= will_paginate @orders %></p>

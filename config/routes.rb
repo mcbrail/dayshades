@@ -1,5 +1,14 @@
 Dayshades::Application.routes.draw do
 
+  resources :orders
+
+
+  resources :line_items
+
+
+  resources :carts
+
+
   resources :admins
   resources :categories
   resources :products
