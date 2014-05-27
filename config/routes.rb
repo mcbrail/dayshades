@@ -33,7 +33,7 @@ Dayshades::Application.routes.draw do
 
   get "customers/index"
 
-  get "customers/new"
+  #get "customers/new"
 
   get "customers/edit"
 

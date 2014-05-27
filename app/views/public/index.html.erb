@@ -3,7 +3,7 @@
         <div class="top-panel-links">
             <ul class="list-align-right">
                 <li><%= link_to 'REGISTER', customers_new_path %></li>
-                <li><%= link_to 'SIGN IN', "#" %></li>
+                <li><%#= link_to 'SIGN IN', "#" %></li>
                 <li><%= link_to 'ADMIN', administrators_path %></li>
                 <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
@@ -49,7 +49,7 @@
                                           <%= image_tag(category.image, :size => "260x300") %><br/>
                                             <h3><%= category.name %><h3>
                                             <div class="clear"><br></div>
-                                            <%= link_to 'VIEW CATEGORY','#', {class:"button-class"} %>
+                                            <%#= link_to 'CATEGORY','#', {class:"button-class"} %>
                                             <br><br>
                                     </div>
                                 <% end %>
