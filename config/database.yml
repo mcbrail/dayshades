@@ -18,20 +18,28 @@ test:
   pool: 5
   timeout: 5000
 
+#production:
+
+  #adapter: postgresql
+ # encoding: unicode
+ # adapter: sqlite3
+ # database: d7kbm2umtdq88b
+ # pool: 5
+ # timeout: 5000
+#  username: rbujkvxfnppuzr
+#=#======
+#  adapter:postgresql
+#  encoding: unicode
+#  pool: 5
+#  database:  d7kbm2umtdq88b
+#  username:  rbujkvxfnppuzr
+#>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
+#  password: OMTt1yE1LYQSUDTBHbxsWbNGoq
+
 production:
-<<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
-  adapter: sqlite3
-  database: d7kbm2umtdq88b
+  database: dar5nm2u1h6bmg
   pool: 5
-  timeout: 5000
-  username: rbujkvxfnppuzr
-=======
-  adapter:postgresql
-  encoding: unicode
-  pool: 5
-  database:  d7kbm2umtdq88b
-  username:  rbujkvxfnppuzr
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
-  password: OMTt1yE1LYQSUDTBHbxsWbNGoq
+  username: ujfofqxfrpgbas
+  password: 50P3fBmS9DdAqkyxt60RHg
