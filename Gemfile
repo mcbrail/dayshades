@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
- ruby "1.9.3"
+ #ruby "1.9.3"
 gem 'rails', '3.2.16'
 
 
-group :development, :test do
+group :development do
  gem 'sqlite3'
 end
 
 
-group :production, :staging do
+group :production, :test do
   gem "pg"
   gem 'rails_12factor', '0.0.2' 
 end
