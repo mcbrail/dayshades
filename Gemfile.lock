@@ -137,7 +137,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.16)
   rails_12factor (= 0.0.2)
-  sass
+  sass (~> 3.3.7)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (~> 2.5.0)

@@ -12,11 +12,12 @@ group :production, :test do
   gem "pg"
   gem 'rails_12factor', '0.0.2' 
 end
-gem 'sass'
+
 gem 'uglifier', '~>2.5.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass', '~> 3.3.7'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 3.1.1'
  end
