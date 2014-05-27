@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-Store::Application.configure do
-=======
 Dayshades::Application.configure do
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-<<<<<<< HEAD
   config.consider_all_requests_local       = false 
-=======
-  config.consider_all_requests_local       = false
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
@@ -28,11 +20,7 @@ Dayshades::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-<<<<<<< HEAD
   # Defaults to Rails.root.join("public/assets")
-=======
-  # Defaults to nil and saved in location specified by config.assets.prefix
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   # config.assets.manifest = YOUR_PATH
 
   # Specifies the header that your server uses for sending files
@@ -76,10 +64,7 @@ Dayshades::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-<<<<<<< HEAD
   
  #set delivery method to :smtp, :sendmail or :test
    
-=======
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 end
