@@ -12,7 +12,7 @@ group :production, :test do
   gem "pg"
   gem 'rails_12factor', '0.0.2' 
 end
-
+gem 'sass'
 gem 'uglifier', '~>2.5.0'
 
 group :assets do
