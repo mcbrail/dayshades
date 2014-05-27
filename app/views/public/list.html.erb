@@ -2,9 +2,15 @@
   <div class="top">
         <div class="top-panel-links">
             <ul class="list-align-right">
+<<<<<<< HEAD
                 <li><%= link_to 'REGISTER', customers_new_path %></li>
                 <li><%= link_to 'SIGN IN', "#" %></li>
                 <li><%= link_to 'ADMIN', administrators_path %></li> 
+=======
+                <li><%= link_to 'REGISTER', "customers_new_path" %></li>
+                <li><%= link_to 'SIGN IN', "#" %></li>
+                <li><%= link_to 'ADMIN', "administrators_path" %></li> 
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
                 <li><%= image_tag ("facebook.png") %> </li>
                 <li><%= image_tag ("twitter.png") %></li>
             </ul>
@@ -45,7 +51,11 @@
                                             </div>
                                             <div class="clear"><br></div>
                                             
+<<<<<<< HEAD
                                             <%= link_to 'ADD TO CART', {:action => 'show', :id => product.id}, {class:"button-class"} %>
+=======
+                                            <%= link_to 'VIEW DETAILS', {:action => 'show', :id => product.id}, {class:"button-class"} %>
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
                                             <br><br>
                                     </div>
                                 <% end %>
@@ -64,7 +74,11 @@
 
 <div class="bottom-wrapper">
 	<div class="bottom">
+<<<<<<< HEAD
 		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+=======
+		<p class="text"><%= link_to 'HOME', public_index_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_list_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
         <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@lebom" %> </p>
 	</div>

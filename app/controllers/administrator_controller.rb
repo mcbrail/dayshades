@@ -1,26 +1,13 @@
-class AdministratorsController < ApplicationController
+class AdministratorController < ApplicationController
   def index
-<<<<<<< HEAD
-
-  	@products = Product.find_by_sql("SELECT * FROM PRODUCTS")
-  	@categories = Category.find_by_sql("SELECT name, description FROM CATEGORIES")
-
-
-
-=======
     @admin = Administrator.all
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   	#@products_category.find_by_sql("select @categories.name, @products.code, @products.color, @products.fabric
   	#@products.price, from products, categories where @categories.id = @products.category_id")
   end
 
   def new
   	@admin = Administrator.new
-<<<<<<< HEAD
-  	@admins = Administrator.all
-=======
     @admins = Administrator.all
->>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   end
 
   def create
@@ -62,7 +49,4 @@ class AdministratorsController < ApplicationController
   		redirect_to administrators_new_path, :notice => "Administrator has been deleted"
   end
 
-  def login
-  	@admin = Admin.new
-  end
 end

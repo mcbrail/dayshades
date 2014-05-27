@@ -1,4 +1,5 @@
 module ApplicationHelper
+<<<<<<< HEAD
 
   def flash_class(level)
     case level
@@ -12,4 +13,6 @@ module ApplicationHelper
 	def error_messages_for(object)
 		render(:partial => 'application/error_messages', :locals => {:object => object})
 	end
+=======
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 end

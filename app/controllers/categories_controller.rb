@@ -1,6 +1,10 @@
 class CategoriesController < ApplicationController
+<<<<<<< HEAD
   
   def edit
+=======
+   def edit
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   	@category = Category.find(params[:id])
     @categories = Category.all
   end
@@ -47,4 +51,8 @@ class CategoriesController < ApplicationController
   	@categories = Category.all
     
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

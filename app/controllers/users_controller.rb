@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   # GET /users
   # GET /users.json
   def index
@@ -89,5 +90,33 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+=======
+  def index
+  	@user = User.new
+  	@users = User.all
+  end
+
+   def create
+  	@user = User.new(params[:User])
+  		if @user.save
+        		flash[:notice]='Customer has been added'
+  				redirect_to users_index_path
+  			else
+  				
+        		flash[:notice]='Errors :
+        		                       Could not save customer on the database, Fill in all Fields
+        		                       '
+        		redirect_to users_index_path
+  		end
+  end
+
+  def new
+  end
+
+  def edit
+  end
+
+  def show
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   end
 end

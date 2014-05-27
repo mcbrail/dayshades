@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 require 'digest/sha2'
 class User < ActiveRecord::Base
@@ -48,3 +49,8 @@ attr_accessible :name, :password, :password_confirmation, :salt #:hashed_passwor
     end
     
   end
+=======
+class User < ActiveRecord::Base
+  attr_accessible :address, :email, :name, :password, :phone
+end
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

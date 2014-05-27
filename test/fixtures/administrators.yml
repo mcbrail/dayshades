@@ -5,9 +5,17 @@ one:
   phone: MyString
   email: MyString
   password: MyString
+<<<<<<< HEAD
+=======
+  confirmation: MyString
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
 two:
   name: MyString
   phone: MyString
   email: MyString
   password: MyString
+<<<<<<< HEAD
+=======
+  confirmation: MyString
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

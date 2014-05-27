@@ -50,4 +50,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @categories = Category.all
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

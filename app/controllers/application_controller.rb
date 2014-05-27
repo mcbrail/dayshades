@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+<<<<<<< HEAD
 
   private
     def current_cart
@@ -9,4 +10,6 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = cart.id
       cart
     end
+=======
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 end

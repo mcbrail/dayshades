@@ -1,5 +1,6 @@
 Dayshades::Application.routes.draw do
 
+<<<<<<< HEAD
   resources :orders
 
 
@@ -16,11 +17,29 @@ Dayshades::Application.routes.draw do
   resources :customers
   resources :dashboard
   resources :administrators
+=======
+  get "users/index"
+
+  get "users/new"
+
+  get "users/edit"
+
+  get "users/show"
+
+  get "customers/index"
+
+  get "customers/new"
+
+  get "customers/show"
+
+  get "customers/edit"
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
   get "administrators/index"
 
   get "administrators/new"
 
+<<<<<<< HEAD
   get "administrators/show"
 
   get "administrators/edit"
@@ -38,6 +57,21 @@ Dayshades::Application.routes.draw do
   get "customers/edit"
 
   get "customers/show"
+=======
+  get "administrators/edit"
+
+  get "administrators/show"
+
+  get "administrator/index"
+
+  get "administrator/new"
+
+  get "administrator/edit"
+
+  get "administrator/show"
+
+  get "dashboard/index"
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
   get "products/index"
 
@@ -47,6 +81,16 @@ Dayshades::Application.routes.draw do
 
   get "products/show"
 
+<<<<<<< HEAD
+=======
+  resources :administrators
+  resources :categories
+  resources :products
+  resources  :dashboard
+  resources :customers
+  resources :users
+  
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   get "categories/edit"
 
   get "categories/new"
@@ -55,6 +99,7 @@ Dayshades::Application.routes.draw do
 
   get "categories/index"
 
+<<<<<<< HEAD
   get "dashboard/index"
 
   #resources :public
@@ -80,6 +125,19 @@ Dayshades::Application.routes.draw do
   get "public/products"
 
   get "public/list"
+=======
+  get "public/index"
+
+  get "public/list"
+
+  get "public/show"
+
+  get "public/contact"
+
+  get "public/about"
+
+  get "public/instructions"
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

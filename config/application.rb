@@ -42,7 +42,10 @@ module Dayshades
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
@@ -59,7 +62,10 @@ module Dayshades
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+<<<<<<< HEAD
 
     config.assets.initialize_on_precompile = false
+=======
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   end
 end

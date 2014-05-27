@@ -4,8 +4,13 @@ one:
   code: MyString
   color: MyString
   fabric: MyString
+<<<<<<< HEAD
   image_thumb: MyString
   image_big: MyString
+=======
+  image_big: MyString
+  image_thumb: MyString
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   price: 9.99
   category_id: 1
 
@@ -13,7 +18,12 @@ two:
   code: MyString
   color: MyString
   fabric: MyString
+<<<<<<< HEAD
   image_thumb: MyString
   image_big: MyString
+=======
+  image_big: MyString
+  image_thumb: MyString
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
   price: 9.99
   category_id: 1

@@ -2,6 +2,7 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
   password: 
   password_confirmation: 
 
@@ -9,3 +10,16 @@ two:
   name: MyString
   password: 
   password_confirmation: 
+=======
+  phone: MyString
+  address: MyString
+  email: MyString
+  password: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  address: MyString
+  email: MyString
+  password: MyString
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <%= form_for(@customer) do |f| %>
   <% if @customer.errors.any? %>
@@ -37,3 +38,26 @@
 
   </fieldset>
 <% end %>
+=======
+<%= simple_form_for @customer do |c| %>
+
+Name and Surname <br>
+<%= c.text_field :name, {class:"textfield"} %><br><br>
+
+Contact Numbers <br>
+<%= c.text_field :phone, {class:"textfield"} %><br><br>
+
+Physical Address <br>
+<%= c.text_field :address, {class:"textfield"} %><br><br>
+
+Email Address <br>
+<%= c.text_field :email, {class:"textfield"} %><br><br>
+
+Password <br>
+<%= c.password_field :password, {class:"textfield"} %><br><br>
+
+
+<%= submit_tag "Save", {class:"button-class"} %><br>
+
+<% end %>
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

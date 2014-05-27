@@ -454,4 +454,8 @@ Styling fro the admin area
 .login{margin: 0px auto; width: 600px; padding: 20px; margin-top: 120px; margin-bottom: 250px}
 .login h1{font-size: 18px; text-align: center;}
 .login .login-left{display: inline-block; float: left;width: 350px; margin-right: 30px }
+<<<<<<< HEAD
 .login .login-right{display: inline-block; float: right;width: 100px}
+=======
+.login .login-right{display: inline-block; float: right;width: 100px}
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87

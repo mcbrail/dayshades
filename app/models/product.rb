@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+<<<<<<< HEAD
   default_scope :order => 'code'
 
   has_many :line_items
@@ -19,4 +20,12 @@ class Product < ActiveRecord::Base
   validates_presence_of :category_id, :code, :color, :fabric, :image_big, :image_thumb, :price
 
 
+=======
+
+  belongs_to :categories
+
+  attr_accessible :category_id, :code, :color, :fabric, :image_big, :image_thumb, :price
+
+  validates_presence_of :category_id, :code, :color, :fabric, :image_big, :image_thumb, :price
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 end

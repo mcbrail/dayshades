@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%= simple_form_for @product do |p| %>
+=======
+<%= form_for @product do |p| %>
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 		Select Category <br>
 		<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => true })  %><br><br>
 

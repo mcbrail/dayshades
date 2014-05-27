@@ -23,6 +23,7 @@
 		<div class ="text">
 			
 			<div class="login">
+<<<<<<< HEAD
 					<h1>ADMINISTRATORS LOGIN:<span> Try, YOU WONT WIN</span></h1>
 				<div class = "login-left">
 					<%= form_tag(administrators_path) do %>
@@ -37,6 +38,22 @@
 					           
 					           <%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
       				 <% end %>
+=======
+					<h1>ADMINISTRATORS LOGIN:<span></span></h1>
+				<div class = "login-left">
+					<%= form_for @admin do |a| %>
+
+						Email Address <br>
+						<%= a.text_field :email, {class:"textfield"} %><br><br>
+
+						Password <br>
+						<%= a.password_field :password, {class:"textfield"} %><br><br>
+
+
+						<%= submit_tag "Sign In", {class:"button-class"} %><br>
+
+						<% end %>
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
 				</div>
 				<div class = "login-right">
@@ -61,7 +78,11 @@
 
 <div class="bottom-wrapper">
 	<div class="bottom">
+<<<<<<< HEAD
 		<p class="text"><%= link_to 'HOME', public_home_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_products_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+=======
+		
+>>>>>>> a1a6f8affd8c0f1500ac245dcdfaf5ee5e38de87
 
         <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
 	</div>
