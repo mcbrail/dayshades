@@ -1,0 +1,13 @@
+<%= simple_form_for @category do |c| %>
+		
+	Category Name <br>
+	<%= c.text_field :name, {class:"textfield"} %><br><br>
+
+	Product Image (thumbnals url Product name/thumbnail) <br>
+	<%= c.text_field :image,{class:"textfield"} %><br><br>
+
+	Category Description <br>
+	<%= c.text_field :description,{class:"textfield textarea-height"} %><br><br>
+
+	<%= submit_tag "Save Category", {class:"button-class"} %><br>
+<% end %>

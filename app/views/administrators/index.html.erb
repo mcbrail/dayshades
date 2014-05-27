@@ -1,0 +1,68 @@
+<div class="admin-top">	
+	<div class="wraptop">
+	  <div class="top">
+	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
+	        
+	        <div class="top-panel-links">
+	        	<ul>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+	            	<li></li>
+
+	            </ul>
+	        
+	        </div>
+		</div>
+	</div>
+</div>
+
+<div class="admin-wrap">
+	<div class="admin-content">
+		<div class ="text">
+			
+			<div class="login">
+					<h1>ADMINISTRATORS LOGIN:<span></span></h1>
+				<div class = "login-left">
+					<%= form_for @admin do |a| %>
+
+						Email Address <br>
+						<%= a.text_field :email, {class:"textfield"} %><br><br>
+
+						Password <br>
+						<%= a.password_field :password, {class:"textfield"} %><br><br>
+
+
+						<%= submit_tag "Sign In", {class:"button-class"} %><br>
+
+						<% end %>
+
+				</div>
+				<div class = "login-right">
+					<%= link_to (image_tag ("keyhole.png")), public_home_path %>
+				</div>
+				<div class"clear"></div>
+			</div>	
+
+			
+			
+			<div class="clear"></div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+	</div>
+</div>

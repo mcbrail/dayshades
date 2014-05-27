@@ -1,0 +1,71 @@
+<div class="wraptop">
+  <div class="top">
+        <div class="top-panel-links">
+            <ul class="list-align-right">
+                <li><%= link_to 'REGISTER', "customers_new_path" %></li>
+                <li><%= link_to 'SIGN IN', "#" %></li>
+                <li><%= link_to 'ADMIN', "administrators_path" %></li> 
+                <li><%= image_tag ("facebook.png") %> </li>
+                <li><%= image_tag ("twitter.png") %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="content">
+        <div class="header-row">
+            <div class="logo">
+                    <%= link_to (image_tag ("logo.png")), public_index_path %>
+            </div>
+        </div>
+
+        <div class="row">
+        	<div class="nav">
+        		<ul>
+        			<li><%= link_to 'HOME', public_index_path%></li>
+        			<li><%= link_to 'ABOUT US', public_about_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_list_path %></li>
+        			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
+        			<li><%= link_to 'CONTACT US', public_contact_path %></li>
+        		</ul>
+        	</div>
+    	</div>
+            
+            <div class="row">
+	            <div class="content-col">
+                    <h1>Products</h1>
+	            	<% @products.each do |product| %>
+                                    <div class="picture_box">
+                                          <%= image_tag(h(product.image_thumb), :size => "160x200") %><br/>
+                                            <div class="table-header-style">
+                                            <p>Dress Code : <%= h(product.code) %><p>
+                                            <p>Dress Colour : <br><%= h(product.color) %><p>
+                                            <p><b>Price : R<%= h(product.price) %></b><p>
+                                            </div>
+                                            <div class="clear"><br></div>
+                                            
+                                            <%= link_to 'VIEW DETAILS', {:action => 'show', :id => product.id}, {class:"button-class"} %>
+                                            <br><br>
+                                    </div>
+                                <% end %>
+	            </div>
+        	</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		<p class="text"><%= link_to 'HOME', public_index_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_list_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@lebom" %> </p>
+	</div>
+</div>

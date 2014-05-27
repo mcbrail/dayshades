@@ -1,0 +1,24 @@
+<%= form_for @product do |p| %>
+		Select Category <br>
+		<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => true })  %><br><br>
+
+		Product Code <br>
+		<%= p.text_field :code, {class:"textfield"} %><br><br>
+
+		Product Colour <br>
+		<%= p.text_field :color, {class:"textfield"} %><br><br>
+
+		Fabric Type <br>
+		<%= p.text_field :fabric, {class:"textfield"} %><br><br>
+
+		Product Thumbnail Image <br>
+		<%= p.text_field :image_thumb, {class:"textfield"} %><br><br>
+
+		Product Big Image  <br>
+		<%= p.text_field :image_big, {class:"textfield"} %><br><br>
+
+		Price <br>
+		<%= p.text_field :price, {class:"textfield"} %><br><br>
+
+		<%= submit_tag "Save", {class:"button-class"} %><br>
+<% end %>

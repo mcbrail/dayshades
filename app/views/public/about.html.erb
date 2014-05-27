@@ -1,0 +1,105 @@
+<div class="wraptop">
+  <div class="top">
+        <div class="top-panel-links">
+        	<ul class="list-align-right">
+                <li><%= link_to 'REGISTER', "customers_new_path" %></li>
+                <li><%= link_to 'SIGN IN', "#" %></li>
+	            <li><%= link_to 'ADMIN', administrators_path %></li>
+	            <li><%= image_tag ("facebook.png") %> </li>
+                <li><%= image_tag ("twitter.png") %></li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="content">
+    	<div class="header-row">
+    		<div class="logo">
+    				<%= link_to (image_tag ("logo.png")), public_index_path %>
+    		</div>
+        </div>
+
+        <div class="row">
+        	<div class="nav">
+        		<ul>
+        			<li><%= link_to 'HOME', public_index_path%></li>
+        			<li><%= link_to 'ABOUT US', public_about_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_list_path %></li>
+        			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
+        			<li><%= link_to 'CONTACT US', public_contact_path %></li>
+        		</ul>
+        	</div>
+    	</div>
+            
+            <div class="row">
+	            <div class="content-col">
+	            	<h1>About Us</h1>
+	            		<div class='text-left'>
+	            			<p>Dayshades Bridal Boutique presents our exclusive collection of bridal gowns tailored to meet each bride's needs. These include the latest designs from the world's top famous brands; from simple classical designs to extravagant princess gowns.</p>
+
+	            			<h2>Mission</h2>
+
+	            			<p>Is to make sure that every bride has that special dress to wear for her special occasion at the right price with guaranteed quality!</p>
+
+							<p>Our consultants will guide you through our wide selection of imported exclusive bridal gowns and give professional advice in choosing the right dress.</p>
+
+
+							<p>Our personal service ensures that your gown is specially tailored to suit your body through accurate measurements and minor alterations where required to give you the perfect fit. All our dresses are made to order.</p> 
+
+							<h2>Our Dresses Are From:</h2>
+
+							<%= image_tag ("laposalogo.png") %>
+							<br><br>
+							<%= image_tag ("Maggie_Header_MaggieLogo_On.png") %>
+							<br><br>
+							<%= image_tag ("morileelogo.png") %>
+							&nbsp;&nbsp;&nbsp;
+							<%= image_tag ("pronoviaslogo.png") %>
+	            		</div>
+
+	            		<div class='text-right'>
+	            			<h2>Terms and Conditions</h2>
+
+	            			<ol>
+	            			<li> A minimum 50% deposit is payable before a final order is placed on all goods</li>
+
+							<li>All dresses are made to order</li>
+
+							<li>All measurements to be made using the specified measurement guidelines to ensure accuracy</li>
+
+							<li>Where only a deposit has been paid, the full balance of the order value must be paid at least on the final Fitting Date or within a week after the final fitting date, whichever is the earlier.</li>
+
+							<li>Goods ordered from our exclusive collection take 4 weeks to deliver, if it's a custom cut dress will, take 5 weeks.</li>
+
+							<li>On ordering, a minimum deposit 50% is required on all goods. No alterations can be carried out until the garment cost is paid for in full. Approximate alteration time is one week.</li>
+
+							<li>Exact colours and shades on fabrics and designs on trim, including lace, cannot always be guaranteed. Accessories purchased to be worn with the dress can be used during fitting of gowns etc.</li>
+
+							<li>During measurements and fittings, shoes and underwear must be the ones intended for the wedding day. We will recommend the amount of alterations to gowns, but if the client insists on a fit tighter than recommended, we will not be responsible. Equally, we accept no responsibility for gowns not fitting when collected due to clients increase or decrease in weight or any other reason beyond our control.</li>
+
+							<li>	In the event of a wedding being cancelled for any reason whatsoever, the balance becomes payable immediately and all goods must be collected.</li>
+
+							</ol>
+								<br/><br/>
+	            		</div>
+	            </div>
+        	</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		<p class="text"><%= link_to 'HOME', public_index_path%> | <%= link_to 'ABOUT US', public_about_path %> | <%= link_to 'PRODUCTS', public_list_path %> | <%= link_to 'INSTRUCTIONS', public_instructions_path %> | <%= link_to 'CONTACT US', public_contact_path %></p>
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@lebom" %> </p>
+	</div>
+</div>

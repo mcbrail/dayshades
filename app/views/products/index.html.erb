@@ -1,0 +1,94 @@
+<div class="admin-top">	
+	<div class="wraptop">
+	  <div class="top">
+	   	<div class="top-panel-logo"><h1>DAYSHADES | <span>Admin</span></h1></div>
+	        
+	        <div class="top-panel-links">
+	        	<ul>
+	            	<li><%= link_to 'DASHBOARD', dashboard_index_path %></li>
+	            	<li><%= link_to 'CUSTOMERS', "#" %></li>
+	            	<li><%= link_to 'CATEGORIES', categories_path %></li>
+	            	<li><%= link_to 'PRODUCTS', products_path %></li>
+	            	<li><%= link_to 'ORDERS', "orders_path" %></li>
+	            	<li><%= link_to 'ADMINISTRATORS', administrators_new_path %></li>
+
+	            </ul>
+	        
+	        </div>
+		</div>
+	</div>
+</div>
+
+<div class="admin-wrap">
+	<div class="admin-content">
+		<div class ="text">
+			<h1>Product List</h1>
+			<br/>
+			<strong><p class="stat-blue"><%=	flash[:notice] %></p></strong>
+			<br><br>
+				<div class = "column-right">
+				<br><br>
+					<table width="350" border="0">
+							<tr>
+								<td class="table-header-style td-width-30px"><b> ID</b></td>
+								<td class="table-header-style td-width-30px"><b> IMAGE</b></td>
+								<td class="table-header-style td-width-30px"><b> CATEGORY</b></td>
+							</tr>
+							<% @categories.each do |c| %>
+							<tr>
+								<td><%= c.id %></td>
+								<td><%= image_tag(c.image, :size => "85x100") %></td>
+								<td><%= c.name%></td>
+							</tr>
+							<% end %>
+					</table>
+				</div>
+
+					<div class = "column-left">
+					<%= link_to 'ADD NEW PRODUCT', products_new_path, {class:"button-class"} %>
+					<br><br>
+					<table width="800" border="0">
+							<tr>
+								<td class="table-header-style td-width-30px"><b> IMAGE</b></td>
+								<td class="table-header-style td-width-100px"><b> COLOUR</b></td>
+								<td class="table-header-style td-width-100px"><b> FABRIC</b></td>
+								<td class="table-header-style td-width-100px"><b> CODE</b></td>
+								<td class="table-header-style td-width-40px"><b> CATEGORY</b></td>
+								<td class="table-header-style td-width-40px"><b> PRICE</b></td>
+								<td width="100" class="table-header-style "><b> &nbsp;</b></td>
+								
+							</tr>
+							<% @products.each do |product| %>
+								<tr>
+									<td class="align-center"><%= link_to image_tag(product.image_thumb, :size => "85x100"), product %></td>
+									<td class="align-center"><%= product.color %></td>
+									<td class="align-center"><%= product.fabric %></td>
+									<td class="align-center"><%= product.code %></td>
+									<td class="align-center"><%= product.category_id %></td>
+									<td class="align-center"><b>R<%= product.price %></b></td>
+									<td width="100" class="align-center"><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+								</tr>
+							<% end %>
+						</table>
+	            		
+				    </div>
+				    
+        	</div>
+        </div>
+    </div>
+							
+</div>
+<div class="clear"><br><br></div>
+<div class="wrap-footer">
+	<div class="footer">
+		
+	</div>
+</div>
+
+<div class="bottom-wrapper">
+	<div class="bottom">
+		
+
+        <p>Dayshades Bridal Boutique 2013 &copy; All rights reserved. Website by | <%= link_to 'Thabang Chewa ', "http://www.thabangchewa.co.za" %> & <%= link_to 'Lebo Modimola', "http://www.twitter.com/@leboomm" %> </p>
+	</div>
+</div>
